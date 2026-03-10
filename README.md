@@ -1,16 +1,185 @@
-# React + Vite
+# Students Table – Full Stack Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+This project is a **Students Table Management Application** built using **React.js for the frontend** and **Node.js with Express and PostgreSQL for the backend**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The application allows users to perform **CRUD operations (Create, Read, Update, Delete)** on student records.
+It also includes **form validation, loading simulation, and Excel export functionality**.
 
-## React Compiler
+This project was created as part of a **Full Stack Developer assignment**.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Display students in a table
+* Add new students
+* Edit existing students
+* Delete students with confirmation
+* Form validation (all fields required, valid email format)
+* Simulated loading state
+* Export student data to Excel
+* Responsive and clean UI
+* REST API integration with PostgreSQL
+
+---
+
+## Technologies Used
+
+### Frontend
+
+* React.js
+* Axios
+* CSS
+* XLSX library (Excel export)
+
+### Backend
+
+* Node.js
+* Express.js
+* PostgreSQL
+* pg (PostgreSQL driver)
+* CORS
+
+### Deployment
+
+* Frontend: Netlify
+* Backend: Render
+
+---
+
+## Project Structure
+
+```
+student-table-project
+│
+├── backend
+│   ├── server.js
+│   ├── package.json
+│
+└── frontend
+    ├── src
+    │   ├── components
+    │   │   ├── StudentForm.jsx
+    │   │   ├── StudentTable.jsx
+    │   │
+    │   ├── App.jsx
+    │   ├── App.css
+    │   └── main.jsx
+    │
+    ├── package.json
+```
+
+---
+
+## Installation & Setup
+
+### Clone Repository
+
+```
+git clone https://github.com/nishikant636/student-table-project.git
+```
+
+---
+
+### Backend Setup
+
+Navigate to backend folder:
+
+```
+cd backend
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+Start server:
+
+```
+node server.js
+```
+
+Backend runs on:
+
+```
+http://localhost:5000
+```
+
+---
+
+### Frontend Setup
+
+Navigate to frontend folder:
+
+```
+cd frontend
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+Run the project:
+
+```
+npm run dev
+```
+
+Frontend runs on:
+
+```
+http://localhost:5173
+```
+
+---
+
+## API Endpoints
+
+| Method | Endpoint      | Description      |
+| ------ | ------------- | ---------------- |
+| GET    | /students     | Get all students |
+| POST   | /students     | Add new student  |
+| PUT    | /students/:id | Update student   |
+| DELETE | /students/:id | Delete student   |
+
+---
+
+## Live Deployment
+
+Frontend (Netlify):
+
+```
+https://student-table-project.netlify.app
+```
+
+Backend (Render):
+
+```
+https://student-table-project.onrender.com
+```
+
+---
+
+## Author
+
+**Nishikant Gupta**
+
+Full Stack Developer (Java & React)
+
+GitHub:
+https://github.com/nishikant636
+
+---
+
+## Future Improvements
+
+* Add search functionality
+* Add pagination
+* Improve UI using Material UI or Bootstrap
+* Add authentication
