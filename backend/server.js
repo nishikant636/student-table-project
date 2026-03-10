@@ -67,6 +67,20 @@ app.delete("/students/:id", async (req, res) => {
 });
 
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+// app.listen(5000, () => {
+//   console.log("Server running on port 5000");
+// });
+
+const PORT = process.env.PORT || 5000;
+
+pool.connect((err) => {
+  if (err) {
+    console.error("Database connection failed:", err);
+  } else {
+    console.log("Connected to PostgreSQL database");
+  }
+});
+
+app.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
 });
